@@ -2,7 +2,7 @@
 
 Applied critical thinking skills for AI agents. **RedTeam** skill · **29 commands** · implements *The Red Team Handbook*, Version 10.
 
-> **Quick start:** Run `npx --yes github:CurateLabs/RedTeam install`, reload your harness, then `/redteam challenge <your plan>` in chat. For a full playbook: `/redteam sequence <decision>`.
+> **Quick start:** Run `npx --yes github:DecisionNerd/RedTeam install`, reload your harness, then `/redteam challenge <your plan>` in chat. For a full playbook: `/redteam sequence <decision>`.
 
 ## What is this?
 
@@ -72,7 +72,7 @@ Pin shortcuts: `/redteam pin premortem` creates `/premortem`.
 ### Option 1: CLI (recommended)
 
 ```bash
-npx --yes github:CurateLabs/RedTeam install
+npx --yes github:DecisionNerd/RedTeam install
 ```
 
 Detects harness folders (`.cursor`, `.claude`, `.agents`) and installs the skill. Use `--providers=cursor,claude,agents` and `--scope=project|global` to customize.
@@ -80,7 +80,7 @@ Detects harness folders (`.cursor`, `.claude`, `.agents`) and installs the skill
 ### Option 2: Claude Code plugin
 
 ```
-/plugin marketplace add CurateLabs/RedTeam
+/plugin marketplace add DecisionNerd/RedTeam
 ```
 
 Then install from the plugin list.
@@ -111,7 +111,7 @@ Run `npm run build` first if installing from source.
 ### Option 5: Git submodule
 
 ```bash
-git submodule add https://github.com/CurateLabs/RedTeam .redteam-plugin
+git submodule add https://github.com/DecisionNerd/RedTeam .redteam-plugin
 node .redteam-plugin/cli/bin/cli.js install --providers=claude,cursor
 ```
 
@@ -152,7 +152,7 @@ The skill uses your input as context. Offer `/redteam init` to persist context f
 
 Published with [Astro Starlight](https://starlight.astro.build/) to GitHub Pages:
 
-**https://curatelabs.github.io/RedTeam/**
+**https://DecisionNerd.github.io/RedTeam/**
 
 | Section | Contents |
 |---------|----------|
