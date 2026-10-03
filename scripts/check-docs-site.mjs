@@ -2,11 +2,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { readMetadata } from './lib/metadata.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.join(ROOT, 'dist');
-const ORIGIN = 'https://curatelabs.github.io';
-const BASE_PATH = '/RedTeam/';
+const { pagesOrigin: ORIGIN, basePath } = readMetadata();
+const BASE_PATH = `${basePath}/`;
 const SITE_URL = `${ORIGIN}${BASE_PATH}`;
 
 function files(directory, predicate) {

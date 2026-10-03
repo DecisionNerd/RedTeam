@@ -23,12 +23,12 @@ Claim register → confidence → overconfidence flags → language fixes.
 
 ## RedTeam notes
 
-Handbook v10 command technique. See skill/reference/extensions-catalog.md.
+Handbook v10 command technique. See skills/redteam/reference/extensions-catalog.md.
 
 ## Related
 
-- [/redteam calibrate](https://github.com/CurateLabs/RedTeam/blob/main/skill/reference/calibrate.md)
+- [/redteam calibrate](https://github.com/DecisionNerd/RedTeam/blob/main/skills/redteam/reference/calibrate.md)
 
 ## Lineage
 
-Part of [*The Red Team Handbook, Version 10*](/RedTeam/handbook/), maintained by Curate Labs — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](/RedTeam/developers/strategy/source-lineage/) and [NOTICE.md](https://github.com/CurateLabs/RedTeam/blob/main/NOTICE.md).
+Part of [*The Red Team Handbook, Version 10*](/RedTeam/handbook/), maintained by DecisionNerd — successor to the defunct UFMCS v9.0 work. See [source lineage](/RedTeam/developers/strategy/source-lineage/) and [NOTICE.md](https://github.com/DecisionNerd/RedTeam/blob/main/NOTICE.md).

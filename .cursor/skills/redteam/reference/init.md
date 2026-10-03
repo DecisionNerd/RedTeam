@@ -82,7 +82,7 @@ Skip questions already answered in provided material. Confirm inferences; don't 
 
 Write to `CONTEXT.md` at project root (preferred) or `.redteam/CONTEXT.md` if the user prefers isolation.
 
-Ensure `.redteam/config.json` exists (copy from template if needed).
+Before writing, run `node <skill-dir>/scripts/init.mjs` (`<skill-dir>` is the directory containing SKILL.md) with cwd at the project root. It creates the `.redteam/` scaffold (`config.json`, `CONTEXT.template.md`, `reviews/`, `sessions/`) if missing and never overwrites existing files. Follow the template headings when writing CONTEXT.md.
 
 ## Step 5: Recommend next commands
 

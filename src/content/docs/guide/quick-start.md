@@ -10,14 +10,10 @@ Get RedTeam running in a few minutes.
 ## 1. Install
 
 ```bash
-npx --yes github:CurateLabs/RedTeam install
+npx skills add DecisionNerd/RedTeam
 ```
 
-This detects harness folders (`.cursor`, `.claude`, `.agents`) and installs the skill. Customize with:
-
-```bash
-npx --yes github:CurateLabs/RedTeam install --providers=cursor,claude,agents --scope=project
-```
+Answer the prompts to pick the agents in your project.
 
 ## 2. Reload
 

@@ -14,6 +14,9 @@ argument-hint: "[command] [target]"
 user-invocable: true
 allowed-tools:
   - Bash(node scripts/*)
+  - Bash(node */scripts/context.mjs*)
+  - Bash(node */scripts/pin.mjs*)
+  - Bash(node */scripts/init.mjs*)
 license: Apache-2.0
 ---
 
@@ -25,9 +28,9 @@ Superset catalog: [reference/extensions-catalog.md](reference/extensions-catalog
 
 ## Setup
 
-You MUST do these steps before proceeding:
+You MUST do these steps before proceeding. `<skill-dir>` below is the directory containing this SKILL.md (the runtime usually shows it as the skill's base directory); run scripts from there, never from the user's project.
 
-1. Run `node scripts/context.mjs` once per session (or `node <skill-base-dir>/scripts/context.mjs` if the runtime shows the skill path). Keep cwd at the user's project. If the request names a specific decision, document, or file, append `--target <path>` to the command. If you've already seen its output in this conversation, do not re-run it. The script prints the project's decision context (`CONTEXT.md` when present) or reports `NO_CONTEXT_MD`. **If it reports `NO_CONTEXT_MD`:** divert into `reference/init.md` only when the user invoked `init`, or when they are starting a new decision review with no prior context and need structured capture. For scoped commands against material the user already provided in chat (a plan, memo, strategy, PRD, email draft), **do not block on init** — the user's input is the context. Offer `/redteam init` once as an optional follow-up to persist context. A missing CONTEXT.md must never block a scoped review.
+1. Run `node <skill-dir>/scripts/context.mjs` once per session. Keep cwd at the user's project. If the request names a specific decision, document, or file, append `--target <path>` to the command. If you've already seen its output in this conversation, do not re-run it. The script prints the project's decision context (`CONTEXT.md` when present) or reports `NO_CONTEXT_MD`. **If it reports `NO_CONTEXT_MD`:** divert into `reference/init.md` only when the user invoked `init`, or when they are starting a new decision review with no prior context and need structured capture. For scoped commands against material the user already provided in chat (a plan, memo, strategy, PRD, email draft), **do not block on init** — the user's input is the context. Offer `/redteam init` once as an optional follow-up to persist context. A missing CONTEXT.md must never block a scoped review.
 2. If the user invoked a sub-command (`premortem`, `ach`, `challenge`, ...), you MUST read `reference/<command>.md` next. Non-optional. The reference defines the command's flow.
 3. For any review targeting a document, plan, or codebase artifact, read the actual source material before analyzing. Do not critique from memory or summary alone.
 4. Read `reference/principles.md` when performing any adversarial or evaluative command. It encodes the four core principles and ACT/GTM fundamentals. Skipping it produces shallow pushback instead of structured red teaming.
@@ -94,7 +97,7 @@ If the first word is `init`, or routing rule 3 maps to a from-scratch decision c
 **Pin** creates a standalone shortcut so `$<command>` invokes `$redteam <command>` directly. **Unpin** removes it.
 
 ```bash
-node scripts/pin.mjs <pin|unpin> <command>
+node <skill-dir>/scripts/pin.mjs <pin|unpin> <command>
 ```
 
 Valid `<command>` is any command from the table above. Report the script's result concisely.
@@ -106,6 +109,7 @@ When writing artifacts to `.redteam/`:
 - Reviews → `.redteam/reviews/<slug>.md`
 - Session notes → `.redteam/sessions/<date>-<slug>.md`
 - Use ISO dates in filenames. Slug from the target topic (lowercase, hyphenated).
+- `/redteam init` runs `node <skill-dir>/scripts/init.mjs` to create `.redteam/` (`reviews/`, `sessions/`, `config.json`, `CONTEXT.template.md`) without overwriting existing files.
 
 Always tell the user what was written and where. In chat-only mode (no `.redteam/`), deliver the full analysis in the response; offer to persist with `/redteam init` if useful.
 

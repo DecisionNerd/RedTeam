@@ -2,7 +2,7 @@
 
 Tools, techniques, and practices from ***The Red Team Handbook*, Version 10**. Most support **ACT**, **GTM**, or both. See [lineage.md](lineage.md).
 
-**Canonical handbook:** [The Red Team Handbook, Version 10](https://curatelabs.github.io/RedTeam/handbook/) — chapter index and concept map. This file is the facilitation-oriented subset with command mappings.
+**Canonical handbook:** [The Red Team Handbook, Version 10](https://decisionnerd.github.io/RedTeam/handbook/) — chapter index and concept map. This file is the facilitation-oriented subset with command mappings.
 
 **Legend:** ACT = Applied Critical Thinking · GTM = Groupthink Mitigation
 
@@ -282,7 +282,7 @@ Push past the obvious fix to ask who or what structurally bears the load. → `a
 
 ---
 
-## RedTeam extensions (v0.2)
+## RedTeam extensions
 
 See [extensions-catalog.md](extensions-catalog.md) for commands: `outside-view`, `invert`, `incentives`, `ladder`, `steelman`, `calibrate`, `sequence`, `culture`, `ai-check`, `launch`, `rfc`, `misuse`, `reversibility`, `record`.
 
@@ -306,4 +306,4 @@ Reference: [bias-catalog.md](bias-catalog.md) · [ai-anti-patterns.md](ai-anti-p
 
 ## Lineage
 
-Part of [*The Red Team Handbook*, Version 10](https://curatelabs.github.io/RedTeam/handbook/). RedTeam skill implementation. Predecessor: UFMCS v9.0. See [lineage.md](lineage.md) and [`docs/strategy/source-lineage.md`](../../docs/strategy/source-lineage.md).
+Part of [*The Red Team Handbook*, Version 10](https://decisionnerd.github.io/RedTeam/handbook/). RedTeam skill implementation. Predecessor: UFMCS v9.0. See [lineage.md](lineage.md) and [`docs/strategy/source-lineage.md`](https://github.com/DecisionNerd/RedTeam/blob/main/docs/strategy/source-lineage.md).

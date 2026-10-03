@@ -24,3 +24,5 @@ This creates the next-numbered record, e.g. `0001-<short-slug>.md`. Fill it in (
 | — | Skills-only execution (no server, no model calls from code) | Accepted, ADR pending | — |
 | — | LLM-only quality gate (no deterministic validator) | Accepted, ADR pending | — |
 | — | Handbook techniques summarized, not reproduced verbatim | Accepted, ADR pending | — |
+| — | Install via vercel-labs skills CLI (`skills/redteam/` is the installable artifact) | Accepted, ADR pending | 2026-10-02 |
+| — | package.json as single source of truth for version and repository owner (npm run sync / npm test) | Accepted, ADR pending | 2026-10-02 |

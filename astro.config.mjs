@@ -1,9 +1,12 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import { readMetadata } from './scripts/lib/metadata.mjs';
+
+const meta = readMetadata();
 
 export default defineConfig({
-  site: 'https://curatelabs.github.io',
-  base: '/RedTeam',
+  site: meta.pagesOrigin,
+  base: meta.basePath,
   trailingSlash: 'always',
   integrations: [
     starlight({
@@ -15,7 +18,7 @@ export default defineConfig({
         {
           icon: 'github',
           label: 'GitHub',
-          href: 'https://github.com/CurateLabs/RedTeam',
+          href: meta.repoUrl,
         },
       ],
       sidebar: [

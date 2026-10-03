@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Build: copy skill/ source into provider-specific directories.
- * Skills-only — no compilation, just path substitution and copy.
+ * Build: copy skills/redteam/ source into provider-specific directories (verbatim).
+ * Skills-only — no compilation or templating, just copy.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -9,9 +9,9 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
-const SKILL_SRC = path.join(ROOT, 'skill');
+const SKILL_SRC = path.join(ROOT, 'skills', 'redteam');
 
-const PROVIDERS = {
+export const PROVIDERS = {
   cursor: '.cursor/skills/redteam',
   claude: '.claude/skills/redteam',
   agents: '.agents/skills/redteam',
@@ -27,10 +27,6 @@ function copyDir(src, dest) {
     const destPath = path.join(dest, entry.name);
     if (entry.isDirectory()) {
       copyDir(srcPath, destPath);
-    } else if (entry.name === 'SKILL.md') {
-      let content = fs.readFileSync(srcPath, 'utf8');
-      content = content.replaceAll('{{scripts_path}}', 'scripts');
-      fs.writeFileSync(destPath, content);
     } else {
       fs.copyFileSync(srcPath, destPath);
     }
@@ -55,13 +51,6 @@ function buildDist() {
   for (const [name, relDest] of Object.entries(PROVIDERS)) {
     const dest = path.join(distRoot, name, relDest);
     copyDir(SKILL_SRC, dest);
-    // Fix SKILL.md paths in dist
-    const skillMd = path.join(dest, 'SKILL.md');
-    if (fs.existsSync(skillMd)) {
-      let content = fs.readFileSync(skillMd, 'utf8');
-      content = content.replaceAll('{{scripts_path}}', 'scripts');
-      fs.writeFileSync(skillMd, content);
-    }
     console.log(`✓ dist/${name}`);
   }
 
@@ -104,4 +93,6 @@ function main() {
   console.log('\nDone.');
 }
 
-main();
+if (process.argv[1] && fileURLToPath(import.meta.url) === fs.realpathSync(process.argv[1])) {
+  main();
+}

@@ -2,7 +2,7 @@
 
 Living documentation for the **RedTeam** project — product context, experience evidence, requirements, design, architecture, testing, publishing, and observability. Structured for behavior-driven development so people and AI coding agents have full in-repo context.
 
-> **User-facing content** (install guide, handbook) lives in the repository's [Starlight content directory](https://github.com/CurateLabs/RedTeam/tree/main/src/content/docs) and is published separately on the docs site. This folder is **project documentation only**.
+> **User-facing content** (install guide, handbook) lives in the repository's [Starlight content directory](https://github.com/DecisionNerd/RedTeam/tree/main/src/content/docs) and is published separately on the docs site. This folder is **project documentation only**.
 
 ## How the docs are organized
 
@@ -32,7 +32,7 @@ Supporting detail lives in subfolders:
 | Handbook v10 | `src/content/docs/handbook/` | `/handbook/` |
 | Developer Docs | `docs/` (synced at build) | `/developers/` |
 
-Build: `npm run docs:site` → https://curatelabs.github.io/RedTeam/
+Build: `npm run docs:site` → https://decisionnerd.github.io/RedTeam/
 
 ## Conventions
 

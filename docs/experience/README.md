@@ -6,7 +6,7 @@ This folder connects continuous discovery and experience design to delivery. It 
 
 RedTeam is a skills product with no hosted runtime, so discovery is lightweight and evidence-driven:
 
-- **Participants:** maintainers and power users at Curate Labs; feedback from GitHub issues and install friction reports
+- **Participants:** maintainers and power users at DecisionNerd; feedback from GitHub issues and install friction reports
 - **Evidence sources:** install smoke tests, command output quality in real decisions, `.redteam/reviews/` usefulness at retrospectives, handbook and guide usage on the docs site
 - **Recording:** opportunities and journeys live here; validated behaviors become requirements in [`../REQUIREMENTS.md`](../REQUIREMENTS.md)
 - **Threshold for requirements:** a behavior is required when it is part of the install path, a core command flow, or a published-docs contract users depend on

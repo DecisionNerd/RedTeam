@@ -21,8 +21,8 @@ Match symptom to anti-pattern table → run recommended command (`ai-check`, `st
 
 ## RedTeam notes
 
-Reference doc: skill/reference/ai-anti-patterns.md
+Reference doc: skills/redteam/reference/ai-anti-patterns.md
 
 ## Lineage
 
-Part of [*The Red Team Handbook, Version 10*](/RedTeam/handbook/), maintained by Curate Labs — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](/RedTeam/developers/strategy/source-lineage/) and [NOTICE.md](https://github.com/CurateLabs/RedTeam/blob/main/NOTICE.md).
+Part of [*The Red Team Handbook, Version 10*](/RedTeam/handbook/), maintained by DecisionNerd — successor to the defunct UFMCS v9.0 work. See [source lineage](/RedTeam/developers/strategy/source-lineage/) and [NOTICE.md](https://github.com/DecisionNerd/RedTeam/blob/main/NOTICE.md).
