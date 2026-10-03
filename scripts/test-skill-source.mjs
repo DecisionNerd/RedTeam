@@ -221,7 +221,12 @@ function checkE2E() {
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'redteam-e2e-'));
   try {
     execFileSync('git', ['init', '-q'], { cwd: tmp });
-    execFileSync('npx', ['--yes', 'skills', 'add', ROOT, '-y', '--copy', '-a', 'claude-code'], { cwd: tmp, stdio: 'pipe' });
+    // npx is a .cmd shim on Windows, which execFileSync cannot launch without a shell.
+    execFileSync('npx', ['--yes', 'skills', 'add', ROOT, '-y', '--copy', '-a', 'claude-code'], {
+      cwd: tmp,
+      stdio: 'pipe',
+      shell: process.platform === 'win32',
+    });
     const installed = path.join(tmp, '.claude', 'skills', 'redteam', 'SKILL.md');
     assert(fs.existsSync(installed), 'e2e: .claude/skills/redteam/SKILL.md was not installed');
     assert(!PLACEHOLDER.test(fs.readFileSync(installed, 'utf8')), 'e2e: installed SKILL.md contains {{...}} placeholders');

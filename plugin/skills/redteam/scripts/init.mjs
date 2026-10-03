@@ -27,12 +27,14 @@ function ensureDir(dir, label) {
 }
 
 function copyIfMissing(src, dest, label) {
-  if (fs.existsSync(dest)) {
+  try {
+    // COPYFILE_EXCL: never overwrite, even if the file appears after a check.
+    fs.copyFileSync(src, dest, fs.constants.COPYFILE_EXCL);
+    console.log(`created ${label}`);
+  } catch (err) {
+    if (err.code !== 'EEXIST') throw err;
     console.log(`exists ${label}`);
-    return;
   }
-  fs.copyFileSync(src, dest);
-  console.log(`created ${label}`);
 }
 
 function main() {

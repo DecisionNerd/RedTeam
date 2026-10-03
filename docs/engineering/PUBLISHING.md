@@ -50,7 +50,7 @@ To change the repository owner, edit `repository.url` in `package.json`, run `np
 ## Deployment verification
 
 - **Docs:** `npm run docs:site` completes; `scripts/check-docs-site.mjs` validates `/RedTeam/` links
-- **Install:** `npm test` verifies the source skill, provider copies, and init scaffold
+- **Install:** `REDTEAM_E2E=1 npm test` runs a real `npx skills add` into a temp project; plain `npm test` is the offline check of the source skill, provider copies, init scaffold, and metadata
 - **Harness:** maintainer spot-checks `/redteam challenge` after skill changes
 
 ## Rollback and recovery
