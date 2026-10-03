@@ -32,7 +32,7 @@ Defines red teaming, the four core principles, and how techniques are organized 
 
 ## RedTeam note
 
-UFMCS v9 history lives in docs/SOURCE.md. The RedTeam skill implements Handbook v10. ACT and GTM remain useful technique labels.
+UFMCS v9 history lives in [source lineage](/RedTeam/developers/strategy/source-lineage/). The RedTeam skill implements Handbook v10. ACT and GTM remain useful technique labels.
 
 ## See also
 

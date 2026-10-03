@@ -17,8 +17,10 @@ For ChatGPT Custom GPTs or OpenAI-compatible agent harnesses.
 ### Codex / Agents skill
 
 ```bash
-npx --yes github:CurateLabs/RedTeam install --providers=agents
+npx skills add DecisionNerd/RedTeam
 ```
+
+Choose Codex when prompted.
 
 Or copy manually:
 

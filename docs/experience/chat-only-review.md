@@ -16,7 +16,7 @@ Decision-makers, strategists, and AI power users who want immediate challenge ou
 
 1. User has a plan, memo, or decision draft
 2. User invokes `/redteam <command>` with the target in the message
-3. Model loads `skill/SKILL.md` and the command reference flow
+3. Model loads `skills/redteam/SKILL.md` and the command reference flow
 4. Model returns structured output in chat
 
 ## Opportunity and hypothesis

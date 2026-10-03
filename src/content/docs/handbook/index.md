@@ -60,6 +60,6 @@ The [concept library](/RedTeam/handbook/concepts/) explains the ideas behind the
 
 ## A note on this edition
 
-This is Version 10 of *The Red Team Handbook*, maintained by Curate Labs and adapted for civilian, organizational, and AI-assisted decision-making. It succeeds the UFMCS Version 9 handbook while preserving the lineage of ideas that remain useful.
+This is Version 10 of *The Red Team Handbook*, maintained by DecisionNerd and adapted for civilian, organizational, and AI-assisted decision-making. It succeeds the UFMCS Version 9 handbook while preserving the lineage of ideas that remain useful.
 
-For provenance, scope, and adaptation decisions, see [Source & lineage](/RedTeam/developers/strategy/source-lineage/). For the software that implements this material, see the [RedTeam skill](https://github.com/CurateLabs/RedTeam/blob/main/skill/reference/ttp-catalog.md).
+For provenance, scope, and adaptation decisions, see [Source & lineage](/RedTeam/developers/strategy/source-lineage/). For the software that implements this material, see the [RedTeam skill](https://github.com/DecisionNerd/RedTeam/blob/main/skills/redteam/reference/ttp-catalog.md).

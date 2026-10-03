@@ -1,27 +1,24 @@
 ---
 title: "Installation"
-description: "Flags:"
+description: "skills CLI, Claude plugin, ChatGPT, manual copy, and submodule installs."
 sidebar:
   order: 4
 ---
 
-## Option 1: CLI (recommended)
+## Option 1: skills CLI (recommended)
 
 ```bash
-npx --yes github:CurateLabs/RedTeam install
+npx skills add DecisionNerd/RedTeam
 ```
 
-Flags:
+The skills CLI finds the agents in your project (Claude Code, Cursor, Codex, Gemini CLI, GitHub Copilot, and others) and asks where to install. Reload your harness, then run `/redteam tools`.
 
-| Flag | Values | Default |
-|------|--------|---------|
-| `--providers` | `cursor`, `claude`, `agents`, `github`, `gemini` (comma-separated) | auto-detect |
-| `--scope` | `project`, `global` | `project` |
+Update with `npx skills update redteam`; remove with `npx skills remove redteam`. The install does not create `.redteam/`; run `/redteam init` when you want persistent context. Chat-only commands work without it.
 
 ## Option 2: Claude Code plugin
 
 ```
-/plugin marketplace add CurateLabs/RedTeam
+/plugin marketplace add DecisionNerd/RedTeam
 ```
 
 Then install from the plugin list.
@@ -30,7 +27,7 @@ Then install from the plugin list.
 
 1. Create a Custom GPT
 2. Paste `chatgpt/INSTRUCTIONS.md` from the repo into Instructions
-3. Optionally upload `skill/reference/ttp-catalog.md` as knowledge
+3. Optionally upload `skills/redteam/reference/ttp-catalog.md` as knowledge
 
 See `chatgpt/README.md` in the repository.
 
@@ -52,8 +49,8 @@ Run `npm run build` in the repo first if installing from source.
 ## Option 5: Git submodule
 
 ```bash
-git submodule add https://github.com/CurateLabs/RedTeam .redteam-plugin
-node .redteam-plugin/cli/bin/cli.js install --providers=claude,cursor
+git submodule add https://github.com/DecisionNerd/RedTeam .redteam-plugin
+npx skills add ./.redteam-plugin
 ```
 
 ## Requirements

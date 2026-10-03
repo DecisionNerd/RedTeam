@@ -2,7 +2,7 @@
 
 Applied critical thinking skills for AI agents. **RedTeam** skill · **29 commands** · implements *The Red Team Handbook*, Version 10.
 
-> **Quick start:** Run `npx --yes github:DecisionNerd/RedTeam install`, reload your harness, then `/redteam challenge <your plan>` in chat. For a full playbook: `/redteam sequence <decision>`.
+> **Quick start:** Run `npx skills add DecisionNerd/RedTeam`, reload your harness, then `/redteam challenge <your plan>` in chat. For a full playbook: `/redteam sequence <decision>`.
 
 ## What is this?
 
@@ -69,13 +69,17 @@ Pin shortcuts: `/redteam pin premortem` creates `/premortem`.
 
 ## Installation
 
-### Option 1: CLI (recommended)
+### Option 1: skills CLI (recommended)
 
 ```bash
-npx --yes github:DecisionNerd/RedTeam install
+npx skills add DecisionNerd/RedTeam
 ```
 
-Detects harness folders (`.cursor`, `.claude`, `.agents`) and installs the skill. Use `--providers=cursor,claude,agents` and `--scope=project|global` to customize.
+The skills CLI finds the agents in your project (Claude Code, Cursor, Codex, Gemini CLI, GitHub Copilot, and others) and asks where to install. Reload your harness, then run `/redteam tools`.
+
+Update with `npx skills update redteam`; remove with `npx skills remove redteam`. The install does not create `.redteam/`; run `/redteam init` when you want persistent context. Chat-only commands work without it.
+
+The previous GitHub-backed installer (`npx --yes github:…/RedTeam install`) is gone; use `npx skills add`.
 
 ### Option 2: Claude Code plugin
 
@@ -89,7 +93,7 @@ Then install from the plugin list.
 
 1. Create a Custom GPT
 2. Paste `chatgpt/INSTRUCTIONS.md` into Instructions
-3. Optionally upload `skill/reference/ttp-catalog.md` as knowledge
+3. Optionally upload `skills/redteam/reference/ttp-catalog.md` as knowledge
 
 See [chatgpt/README.md](chatgpt/README.md).
 
@@ -112,12 +116,12 @@ Run `npm run build` first if installing from source.
 
 ```bash
 git submodule add https://github.com/DecisionNerd/RedTeam .redteam-plugin
-node .redteam-plugin/cli/bin/cli.js install --providers=claude,cursor
+npx skills add ./.redteam-plugin
 ```
 
 ## `.redteam/` directory
 
-When you run `/redteam init`, the skill writes decision context and stores review artifacts:
+When you run `/redteam init`, the skill creates this scaffold (the installer does not) and then writes decision context and stores review artifacts:
 
 ```
 .redteam/
@@ -152,7 +156,7 @@ The skill uses your input as context. Offer `/redteam init` to persist context f
 
 Published with [Astro Starlight](https://starlight.astro.build/) to GitHub Pages:
 
-**https://DecisionNerd.github.io/RedTeam/**
+**https://decisionnerd.github.io/RedTeam/**
 
 | Section | Contents |
 |---------|----------|

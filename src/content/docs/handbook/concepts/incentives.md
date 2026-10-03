@@ -23,12 +23,12 @@ Stated intent → gaming scenarios → guardrails → redesign.
 
 ## RedTeam notes
 
-Handbook v10 command technique. See skill/reference/extensions-catalog.md.
+Handbook v10 command technique. See skills/redteam/reference/extensions-catalog.md.
 
 ## Related
 
-- [/redteam incentives](https://github.com/CurateLabs/RedTeam/blob/main/skill/reference/incentives.md)
+- [/redteam incentives](https://github.com/DecisionNerd/RedTeam/blob/main/skills/redteam/reference/incentives.md)
 
 ## Lineage
 
-Part of [*The Red Team Handbook, Version 10*](/RedTeam/handbook/), maintained by Curate Labs — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](/RedTeam/developers/strategy/source-lineage/) and [NOTICE.md](https://github.com/CurateLabs/RedTeam/blob/main/NOTICE.md).
+Part of [*The Red Team Handbook, Version 10*](/RedTeam/handbook/), maintained by DecisionNerd — successor to the defunct UFMCS v9.0 work. See [source lineage](/RedTeam/developers/strategy/source-lineage/) and [NOTICE.md](https://github.com/DecisionNerd/RedTeam/blob/main/NOTICE.md).

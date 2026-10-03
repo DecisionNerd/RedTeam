@@ -16,21 +16,15 @@
   "author": "David Spencer",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CurateLabs/RedTeam.git"
+    "url": "git+https://github.com/DecisionNerd/RedTeam.git"
   },
   "type": "module",
-  "bin": {
-    "redteam": "cli/bin/cli.js"
-  },
   "files": [
-    "skill/",
+    "skills/",
     "plugin/",
     ".claude-plugin/",
     "chatgpt/",
-    "cli/",
     "scripts/",
-    ".redteam/config.json",
-    ".redteam/CONTEXT.template.md",
     "LICENSE",
     "NOTICE.md"
   ],
@@ -40,7 +34,10 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "build:dist": "node scripts/build.mjs dist",
-    "test:cli-install": "node scripts/test-cli-install.mjs",
+    "sync": "node scripts/sync-metadata.mjs && node scripts/build.mjs",
+    "preversion": "npm test",
+    "version": "npm run sync && git add -u && git add -A -- skills .cursor .claude/skills .agents .github/skills .gemini plugin",
+    "test": "node scripts/test-skill-source.mjs",
     "docs:prepare": "node scripts/prepare-docs-site.mjs",
     "docs:dev": "npm run docs:prepare && astro dev",
     "docs:check": "npm run docs:prepare && astro check",

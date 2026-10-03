@@ -17,7 +17,7 @@ Attribution, training history, tracing technique lineage — not operational fra
 
 ## Method
 
-Reference only. See docs/SOURCE.md. RedTeam maintains Handbook v10 as an independent successor.
+Reference only. See [source lineage](/RedTeam/developers/strategy/source-lineage/). RedTeam maintains Handbook v10 as an independent successor.
 
 ## RedTeam notes
 
@@ -25,4 +25,4 @@ Historical acknowledgment only. The skill is RedTeam; the handbook is v10.
 
 ## Lineage
 
-Part of [*The Red Team Handbook, Version 10*](/RedTeam/handbook/), maintained by Curate Labs — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](/RedTeam/developers/strategy/source-lineage/) and [NOTICE.md](https://github.com/CurateLabs/RedTeam/blob/main/NOTICE.md).
+Part of [*The Red Team Handbook, Version 10*](/RedTeam/handbook/), maintained by DecisionNerd — successor to the defunct UFMCS v9.0 work. See [source lineage](/RedTeam/developers/strategy/source-lineage/) and [NOTICE.md](https://github.com/DecisionNerd/RedTeam/blob/main/NOTICE.md).

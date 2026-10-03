@@ -34,12 +34,12 @@ Agents and contributors should load `PRODUCT.md` and this file before changing s
 - **Markdown structure:** Headings (`#`–`###`), tables, and code fences for commands in handbook and developer docs
 - **Spacing & layout:** One idea per section; numbered steps in flows; avoid wall-of-text reviews
 - **Iconography & imagery:** Handbook may use diagrams; skill output is text-first
-- **Content structure:** Command references follow per-command templates in `skill/reference/`; handbook chapters in `src/content/docs/handbook/` follow case → decision point → concepts and TTPs in use → reflection → bridge to the next chapter; the final chapter then exposes the complete spell book as a browsable reference. Developer docs follow the docslime lifecycle in `docs/`.
+- **Content structure:** Command references follow per-command templates in `skills/redteam/reference/`; handbook chapters in `src/content/docs/handbook/` follow case → decision point → concepts and TTPs in use → reflection → bridge to the next chapter; the final chapter then exposes the complete spell book as a browsable reference. Developer docs follow the docslime lifecycle in `docs/`.
 
 ## Interaction Patterns
 
 - **Navigation:** Users invoke `/redteam <command> [target]` (29 commands); optional pins via `/redteam pin <command>`
-- **Controls:** Chat commands only; CLI is for install (`npx --yes github:CurateLabs/RedTeam install`); Claude Code also installs via `/plugin marketplace add CurateLabs/RedTeam`
+- **Controls:** Chat commands only; the skills CLI is for install (`npx skills add DecisionNerd/RedTeam`); Claude Code also installs via `/plugin marketplace add DecisionNerd/RedTeam`
 - **States:** Missing CONTEXT.md is valid for chat-only; missing skill install is an install error, not a silent fallback
 - **Motion:** None
 
@@ -47,17 +47,17 @@ Agents and contributors should load `PRODUCT.md` and this file before changing s
 
 | Component / pattern | Use it for | Notes / source |
 |---|---|---|
-| `/redteam <command>` router | All user-facing flows | `skill/SKILL.md` |
-| Per-command reference flow | Structured technique output | `skill/reference/<command>.md` |
-| TTP catalog | Browse handbook techniques | `skill/reference/ttp-catalog.md` |
+| `/redteam <command>` router | All user-facing flows | `skills/redteam/SKILL.md` |
+| Per-command reference flow | Structured technique output | `skills/redteam/reference/<command>.md` |
+| TTP catalog | Browse handbook techniques | `skills/redteam/reference/ttp-catalog.md` |
 | Chapter case study | Teach chapter concepts and TTPs through an unresolved, consequential decision | `src/content/docs/handbook/chapters/` |
 | Final spell book | Browse and combine the complete repertoire after the cumulative chapter journey | `src/content/docs/handbook/chapters/tools-techniques-practices.md` |
-| Extensions catalog | Browse v10-native extensions | `skill/reference/extensions-catalog.md` |
-| CONTEXT.md | Project-anchored background | `.redteam/CONTEXT.template.md` |
+| Extensions catalog | Browse v10-native extensions | `skills/redteam/reference/extensions-catalog.md` |
+| CONTEXT.md | Project-anchored background | `skills/redteam/templates/CONTEXT.template.md` |
 | Review artifact | Persisted command output | `.redteam/reviews/<slug>-<command>.md` |
 | Session notes | Facilitation session records | `.redteam/sessions/<date>-<slug>.md` |
-| Decision record template | `record` command output | `skill/reference/decision-record-template.md` |
-| Pin shortcut | `$<command>` direct invocation | `skill/scripts/pin.mjs` |
+| Decision record template | `record` command output | `skills/redteam/reference/decision-record-template.md` |
+| Pin shortcut | `$<command>` direct invocation | `skills/redteam/scripts/pin.mjs` |
 | Starlight developer sync | Published developer docs | `scripts/prepare-docs-site.mjs` |
 
 ## Accessibility
@@ -68,7 +68,7 @@ Agents and contributors should load `PRODUCT.md` and this file before changing s
 
 ## References
 
-- [Handbook v10](https://curatelabs.github.io/RedTeam/handbook/) — published concepts and techniques
-- [User Guide](https://curatelabs.github.io/RedTeam/guide/) — install and command usage
+- [Handbook v10](https://decisionnerd.github.io/RedTeam/handbook/) — published concepts and techniques
+- [User Guide](https://decisionnerd.github.io/RedTeam/guide/) — install and command usage
 - [`strategy/source-lineage.md`](strategy/source-lineage.md) — attribution and citation
-- [`skill/SKILL.md`](https://github.com/CurateLabs/RedTeam/blob/main/skill/SKILL.md) — skill router implementation
+- [`skills/redteam/SKILL.md`](https://github.com/DecisionNerd/RedTeam/blob/main/skills/redteam/SKILL.md) — skill router implementation

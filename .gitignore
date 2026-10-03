@@ -148,6 +148,13 @@ vite.config.ts.timestamp-*
 .redteam/*.tmp
 # redteam-ignore-end
 
+# written by `npx skills add` when dogfooding the skill in this repo
+skills-lock.json
+
 # Starlight documentation build artifacts and staged developer docs
 .astro/
 src/content/docs/developers/
+
+# local agent tooling: plans and memory never land on main (.claude/skills/redteam stays tracked)
+.claude/plans/
+.claude/agent-memory/

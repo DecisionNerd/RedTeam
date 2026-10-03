@@ -1,6 +1,6 @@
 # RedTeam Extensions Catalog
 
-Techniques and commands in the Handbook v10 catalog. Full docs: [Tools, Techniques & Practices](https://curatelabs.github.io/RedTeam/handbook/chapters/tools-techniques-practices/). AI process guidance: [Chapter 7](https://curatelabs.github.io/RedTeam/handbook/chapters/ai-and-humans-in-the-loop/).
+Techniques and commands in the Handbook v10 catalog. Full docs: [Tools, Techniques & Practices](https://decisionnerd.github.io/RedTeam/handbook/chapters/tools-techniques-practices/). AI process guidance: [Chapter 7](https://decisionnerd.github.io/RedTeam/handbook/chapters/ai-and-humans-in-the-loop/).
 
 ## Commands (v10 extensions)
 

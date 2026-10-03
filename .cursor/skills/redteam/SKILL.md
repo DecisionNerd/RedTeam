@@ -106,6 +106,7 @@ When writing artifacts to `.redteam/`:
 - Reviews → `.redteam/reviews/<slug>.md`
 - Session notes → `.redteam/sessions/<date>-<slug>.md`
 - Use ISO dates in filenames. Slug from the target topic (lowercase, hyphenated).
+- `/redteam init` runs `node scripts/init.mjs` to create `.redteam/` (`reviews/`, `sessions/`, `config.json`, `CONTEXT.template.md`) without overwriting existing files.
 
 Always tell the user what was written and where. In chat-only mode (no `.redteam/`), deliver the full analysis in the response; offer to persist with `/redteam init` if useful.
 

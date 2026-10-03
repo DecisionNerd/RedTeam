@@ -50,5 +50,5 @@ Cultural empathy in practice — stakeholder and worldview mapping with cross-cu
 
 ## Related
 
-- [Cultural Perception Framework](https://curatelabs.github.io/RedTeam/handbook/techniques/cultural-perception-framework/)
+- [Cultural Perception Framework](https://decisionnerd.github.io/RedTeam/handbook/techniques/cultural-perception-framework/)
 - `/redteam frame` — polarity vs problem reframing

@@ -9,11 +9,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { readMetadata } from './lib/metadata.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DOCS = path.join(ROOT, 'docs');
 const OUT = path.join(ROOT, 'src', 'content', 'docs', 'developers');
-const BASE_PATH = '/RedTeam/';
+const BASE_PATH = `${readMetadata().basePath}/`;
 
 const manifest = [
   {
@@ -62,7 +63,7 @@ const manifest = [
     source: 'experience/install-and-run.md',
     output: 'experience/install-and-run.md',
     title: 'Install and run',
-    description: 'Install the skill, build provider bundles, and run the first command.',
+    description: 'Install the skill with the skills CLI, build provider bundles, and run the first command.',
     order: 6,
   },
   {
@@ -76,14 +77,14 @@ const manifest = [
     source: 'engineering/ARCHITECTURE.md',
     output: 'engineering/architecture.md',
     title: 'Architecture',
-    description: 'How RedTeam source skills, provider bundles, project context, reviews, and the installer fit together.',
+    description: 'How RedTeam source skills, provider bundles, project context, reviews, and the skills-CLI install path fit together.',
     order: 8,
   },
   {
     source: 'engineering/TESTING.md',
     output: 'engineering/testing.md',
     title: 'Testing',
-    description: 'How RedTeam verifies CLI installation, generated providers, documentation, and user-visible behavior.',
+    description: 'How RedTeam verifies the installable skill source, generated providers, documentation, and user-visible behavior.',
     order: 9,
   },
   {
