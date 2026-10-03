@@ -36,7 +36,7 @@
     "build:dist": "node scripts/build.mjs dist",
     "sync": "node scripts/sync-metadata.mjs && node scripts/build.mjs",
     "preversion": "npm test",
-    "version": "npm run sync && git add -u && git add -A -- skills .cursor .claude/skills .agents .github/skills .gemini plugin",
+    "version": "npm run sync && git add -u && git add -A -- skills .cursor/skills .claude/skills .agents/skills .github/skills .gemini/skills plugin/skills",
     "test": "node scripts/test-skill-source.mjs",
     "docs:prepare": "node scripts/prepare-docs-site.mjs",
     "docs:dev": "npm run docs:prepare && astro dev",

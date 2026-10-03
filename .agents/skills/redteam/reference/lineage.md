@@ -22,6 +22,6 @@ RedTeam continues the curriculum as **Handbook v10**: updated for civilian, prod
 
 ## Full attribution
 
-Handbook: [The Red Team Handbook, Version 10](https://decisionnerd.github.io/RedTeam/handbook/) · Source: [`docs/strategy/source-lineage.md`](../../docs/strategy/source-lineage.md) · Legal: [`NOTICE.md`](../../NOTICE.md)
+Handbook: [The Red Team Handbook, Version 10](https://decisionnerd.github.io/RedTeam/handbook/) · Source: [`docs/strategy/source-lineage.md`](https://github.com/DecisionNerd/RedTeam/blob/main/docs/strategy/source-lineage.md) · Legal: [`NOTICE.md`](https://github.com/DecisionNerd/RedTeam/blob/main/NOTICE.md)
 
 **Do not** present RedTeam output as military doctrine.
